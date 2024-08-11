@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Kumaresan - Frontend Web Developer</title>
+
+    <meta name="title" content="Vijay Singh - Frontend Web Developer">
+    <meta name="description" content="Vijay Singh - Passionate Frontend Web Developer creating beautiful and responsive websites. Explore my portfolio and blog for tech insights.">
+    <meta name="keywords" content="Vijay Singh, Web Developer, Frontend Developer, Portfolio, Blog, Tech Insights">
+    <meta name="author" content="Vijay Singh">
+
+    <!-- Open Graph Meta Tags / Facebook -->
+    <meta property="og:title" content="Kumaresan - Frontend Web Developer">
+    <meta property="og:description" content="Passionate about crafting beautiful and responsive websites. Explore my portfolio and blog for tech insights.">
+    <meta property="og:image" content="{% static 'assets/images/banner.webp' %}">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kumaresan- Frontend Web Developer">
+    <meta name="twitter:description" content="Passionate about crafting beautiful and responsive websites. Explore my portfolio and blog for tech insights.">
+    <meta name="twitter:image" content="{% static 'assets/images/banner.webp' %}">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'assets/images/vj.webp' %}" type="image/x-icon">
+
+    <!-- Google Fonts: Rubik -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&amp;display=swap">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <!-- Preload Important resources -->
+    <link rel="preload" href="{% static 'assets/css/aos.css' %}" as="style">
+    <link rel="preload" href="{% static 'assets/css/owl.carousel.min.css' %}" as="style">
+    <link rel="preload" href="{% static 'assets/css/bootstrap.min.css' %}" as="style">
+    <link rel="preload" href="{% static 'assets/css/bootstrap-icons.min.css' %}" as="style">
+    <link rel="preload" href="{% static 'assets/css/style.css' %}" as="style">
+</head>
+
+</head>
+
+<body data-bs-theme="dark" data-bs-spy="scroll" data-bs-target="#navbar"> 
+
+    {% include 'Main/header.html' %}
+    {% include 'Main/profile.html' %}
+    {% include 'Main/project.html'%}
+    {% include 'Main/certificates.html'%}
+    {% include 'Main/coures.html'%}
+    {% include 'Main/about.html'%}
+    {% include 'Main/skills.html'%}
+    {% include 'Main/footer.html'%}
+    
+
+ 
+ <!-- JavaScript -->
+ <script src="{% static 'assets/js/aos.js' %}" defer></script>
+ <script src="{% static 'assets/js/jquery-3.7.1.min.js' %}" defer></script>
+ <script src="{% static 'assets/js/owl.carousel.min.js' %}" defer></script>
+ <script src="{% static 'assets/js/bootstrap.min.js' %}" defer></script>
+ <script src="{% static 'assets/js/script.js' %}" defer></script>
+ 
+
+</body>
+</html>

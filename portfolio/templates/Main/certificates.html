@@ -1,0 +1,31 @@
+{% load static %}
+<section id="certificates">
+    <div class="container">
+        <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Do I Write?</span></h6>
+        <h2 class="section-heading text-center">Certificates</h2>
+        <p class="text-center muted-text mt-3 mb-4">From Symposium to many more</p>
+        <div class="row justify-content-center gy-4" data-aos="fade-up" data-aos-delay="600">
+            {% for certificate in certificates %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card">
+                    <div class="banner-container position-relative">
+                        <div class="position-absolute top-0 end-0">
+                            {% if certificate.tag %}
+                            <span class="badge">{{ certificate.tag }}</span>
+                            {% endif %}
+                        </div>
+                        <img src="{{ certificate.image.url }}" class="card-img-top banner" alt="{{ certificate.title }}">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">{{ certificate.title }}</h6>
+                        <p class="card-text description">{{ certificate.description }}</p>
+                        <a href="{{ certificate.url }}" class="text-decoration-none" target="_blank">
+                            <span class="read-more">Read More <i class="bi bi-arrow-up-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

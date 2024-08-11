@@ -1,0 +1,20 @@
+{% load static %}
+
+<section id="about">
+    <div class="container">
+        <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">But who am I?</span></h6>
+        <h2 class="section-heading text-center">About Me</h2>
+        <p class="text-center muted-text mt-3 mb-4">My story in a nutshell ;)</p>
+        <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="200">
+            <div class="col-lg-5 about-portrait">
+                <img src="{{ about_me.portrait.url }}" class="img-fluid pic" alt="About Me Portrait">
+            </div>
+            <div class="col-lg-7">
+                <p class="bio">
+                    {{ about_me.bio|safe }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+

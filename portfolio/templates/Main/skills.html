@@ -1,0 +1,18 @@
+{% load static %}
+<section id="skills">
+    <div class="container">
+        <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What do I know?</span></h6>
+        <h2 class="section-heading text-center">Skills</h2>
+        <p class="text-center muted-text mt-3 mb-4">Here are some of the technologies that are part of my current stack:</p>
+        <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-6 mt-4 gy-4 skills-container" data-aos="fade-up" data-aos-delay="200">
+            {% for skill in skills %}
+            <div class="col">
+                <div class="skill">
+                    <img class="skill-image" src="{{ skill.image.url }}" alt="{{ skill.name }}">
+                    <p class="skill-name">{{ skill.name }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+{% load static %}
+
+<section id="hero">
+    <div class="container">     
+        <div class="row about-content">
+            <div class="col-lg-5 order-lg-2">
+                <div class="hero-portrait">
+                    <div class="pic" data-aos="fade-up" data-aos-delay="600">
+                        <!-- Example image -->
+                        <img height="500px" src="{{ hero_section.portrait_image.url }}" alt="Hero Portrait">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 order-lg-1 hero-content">
+                <span class="h3" data-aos="fade-up" data-aos-delay="0">{{ hero_section.greeting }}</span>
+                <h1 class="name" data-aos="fade-up" data-aos-delay="200"><span>{{ hero_section.name }}</span></h1>
+                <button type="button" class="btn btn-sm mt-3 mb-3 btn-showcase" data-aos="fade-up" data-aos-delay="400"><i class="bi bi-stars"></i> {{ hero_section.profession }}</button>
+                <p class="tagline mb-3" data-aos="fade-up" data-aos-delay="600">{{ hero_section.tagline }}</p>
+                <div class="social-icons pb-2 pt-2 mb-2">
+                    {% if hero_section.github_link %}
+                        <a href="{{ hero_section.github_link }}" target="_blank" class="github" data-aos="fade-up" data-aos-delay="620"><i class="bi bi-github"></i></a>
+                    {% endif %}
+                    {% if hero_section.twitter_link %}
+                        <a href="{{ hero_section.twitter_link }}" target="_blank" class="twitter-x" data-aos="fade-up" data-aos-delay="640"><i class="bi bi-twitter-x"></i></a>
+                    {% endif %}
+                    {% if hero_section.instagram_link %}
+                        <a href="{{ hero_section.instagram_link }}" target="_blank" class="instagram" data-aos="fade-up" data-aos-delay="660"><i class="bi bi-instagram"></i></a>
+                    {% endif %}
+                    {% if hero_section.youtube_link %}
+                        <a href="{{ hero_section.youtube_link }}" target="_blank" class="youtube" data-aos="fade-up" data-aos-delay="680"><i class="bi bi-youtube"></i></a>
+                    {% endif %}
+                    {% if hero_section.linkedin_link %}
+                        <a href="{{ hero_section.linkedin_link }}" target="_blank" class="linkedin" data-aos="fade-up" data-aos-delay="690"><i class="bi bi-linkedin"></i></a>
+                    {% endif %}
+                    {% if hero_section.discord_link %}
+                        <a href="{{ hero_section.discord_link }}" target="_blank" class="discord" data-aos="fade-up" data-aos-delay="700"><i class="bi bi-discord"></i></a>
+                    {% endif %}
+                </div>
+                <div class="d-flex call-to-action">
+                    <a href="{{ hero_section.contact_link }}" data-aos="fade-up" data-aos-delay="710"><button type="button" class="btn me-4 primary-bg-btn"><i class="bi bi-envelope"></i> Contact Me</button></a>
+                    <a href="{{ hero_section.portfolio_link }}" data-aos="fade-up" data-aos-delay="720"><button type="button" class="btn btn-light secondary-bg-btn">View Portfolio <i class="bi bi-arrow-up-right-circle"></i></button></a>
+                </div>                    
+            </div>
+        </div>
+    </div>
+</section>
