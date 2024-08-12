@@ -17,4 +17,11 @@ def BASE(request):
         'skills':skills
 
     }
-    return render(request,'base.html',context)
+    return render(request,'Main/home.html',context)
+
+def CERTIFICATE(request):
+    certificates = Certificate.objects.all()
+    context = {
+        'certificates':certificates
+    }
+    return render(request,'Certificate/certificate.html',context)

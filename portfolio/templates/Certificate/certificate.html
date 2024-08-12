@@ -1,4 +1,8 @@
+{%extends 'base.html' %}
+
 {% load static %}
+
+{%block content%}
 <section id="certificates">
     <div class="container position-relative">
         <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Do I Write?</span></h6>
@@ -28,20 +32,8 @@
             </div>
             {% endfor %}
         </div>
-        <div class="view-all-btn-container">
-            <a href="{% url 'certificates' %}" class="btn btn-primary view-all-btn">View All Certificates</a>
-
-        </div>
     </div>
 </section>
 </br>
 </br>
-<style>
-    .view-all-btn-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 1.5rem; /* Adjust the margin as needed */
-    }
-    
-
-</style>
+{% endblock %}
